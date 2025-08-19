@@ -1,0 +1,31 @@
+// _mixins.scss
+
+@mixin flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+@mixin flex-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+@mixin responsive-font($min, $max) {
+        font-size: $min;
+
+        @media (min-width: 968px) {
+            font-size: clamp(#{$min}, 30px, #{$max});
+        }
+
+        @media (min-width: 1024px) {
+            font-size: clamp(#{$min}, 40px, #{$max});
+        }
+}
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

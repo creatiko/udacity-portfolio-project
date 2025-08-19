@@ -1,0 +1,96 @@
+// _cards.scss
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.cards {
+     display: flex;
+     flex-wrap: wrap;
+     gap: calc($spacing-unit * 3) calc($spacing-unit * 2);
+     margin-bottom: $spacing-unit;
+}
+
+.card {
+          flex-direction: column;
+          background-color: $secondary-color;
+          color: white;
+          width: calc($main-width - calc($spacing-unit * 5));
+          margin: 0 auto;
+          padding: $spacing-unit * 2;
+          border-radius: $spacing-unit;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          @include flex-center;
+
+         &--title {
+              font-family: $font-family;
+              font-weight: bold;
+              margin-bottom: 0;
+              @include responsive-font(1.5rem, 1.2);
+         }
+
+         &--link {
+              margin-bottom: calc($spacing-unit * 2);
+         }
+
+         &--image {
+               width: 100% !important;
+              margin-bottom: 0 !important;
+         }
+
+         &--text {
+              margin-bottom: $spacing-unit;
+              font-family: $font-family;
+               @include responsive-font($base-font-size, 24px);
+         }
+
+         &--featured {
+              border: 2px solid $primary-color;
+         }
+
+         &--featured>&--title {
+              color: $primary-color;
+         }
+
+         
+}
+
+@media only screen and (min-width: 968px) {
+
+.cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 3vw 2vw;
+          margin-bottom: $spacing-unit;
+}
+.card {
+          width: 24.5vw;
+          margin: 0;
+          justify-content: flex-start;
+
+         &--title {
+              @include responsive-font(1.1rem, 1.2);
+         }
+
+         &--text {
+               @include responsive-font($base-font-size !important, 22px);
+         }
+
+         &--button{
+          margin-top:auto;
+         }
+}
+
+
+}
+@media only screen and (min-width: 1024px) {
+
+     .card {
+
+          &--title {
+              @include responsive-font(1.2rem, 1.2);
+          }
+     }
+
+
+}

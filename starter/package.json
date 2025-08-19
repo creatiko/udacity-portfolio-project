@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "sass src/scss/main.scss dist/main.css --style=compressed",
+    "watch": "sass --watch src/scss/main.scss:dist/main.css --style=compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "sass": "^1.79.3"
+  }
+}

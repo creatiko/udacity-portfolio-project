@@ -1,0 +1,138 @@
+//_main.scss
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+#main {
+    background-color: $gray;
+    @include flex-center;
+    flex-direction: column;
+    width: $main-width;
+    height: auto;
+    margin-top: calc($header_height + 2rem); 
+    padding: 0;
+    text-align: center;
+    img {
+        width: $main-width;
+        margin-bottom: 2vw;
+    }
+    section{
+        h1{
+            color: $dark-gray;
+            margin-top: 0;
+            @include responsive-font(calc($base-font-size * 1.5), 50px);
+        }
+        h2{
+            color: $dark-gray;
+            margin-top: 0;
+            @include responsive-font(calc($base-font-size * 1.5), 50px);
+        }
+        .intro{
+            width: calc($main-width - 4vw);
+            padding: 4vw;
+            height: auto;
+            background-color: $secondary-color;
+        }
+        p{
+            padding: calc($spacing-unit * 1.5);
+            @include responsive-font($base-font-size, 24px);
+        }
+    }
+
+        .latest-projects{
+            margin-top: calc($spacing-unit * 1.5);
+            width: calc($main-width);
+            background-color: $light-gray;
+            h2{
+                padding: calc($spacing-unit * 1.5);
+                width: calc($main-width - calc($spacing-unit * 3));
+            }
+        }
+
+        .contact{
+            margin: calc($spacing-unit * 1.5) 0;
+            width: calc($main-width);
+            background-color: $gray;
+            h2{
+                padding: calc($spacing-unit * 1.5);
+                width: calc($main-width - calc($spacing-unit * 3));
+                margin: 0;
+            }
+        }
+}
+
+@media only screen and (min-width: 968px) {
+
+    /* tablets and desktop */
+#main {
+        margin-top: calc($header_height - 8vw);
+
+        img {
+            width: 49%;
+            margin-bottom: 0;
+            margin-right: 1vw;
+        }
+
+        section {
+            h1 {
+                @include responsive-font(calc($base-font-size + 5px), 30px);
+            }
+
+            h2 {
+                @include responsive-font(calc($base-font-size + 5px), 30px);
+            }
+
+            .intro {
+                margin-left: 1vw;
+                width: 49%;
+            }
+        }
+
+        .bio {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: calc($main-width - 4rem);
+            padding:4rem 2rem;
+            margin: 0 auto;
+        }
+
+        .latest-projects {
+            display: flex;
+            flex-direction: column;
+            margin-top: calc($spacing-unit * 1.5);
+            width: calc($main-width - 4rem);
+            padding:4rem 2rem;
+            background-color: $light-gray;
+
+            h2 {
+                padding: calc($spacing-unit * 1.5);
+                width: calc($main-width - calc($spacing-unit * 3));
+            }
+        }
+
+        .contact {
+            width: calc($main-width - 8rem);
+            padding:0 4rem;
+            h2{
+                padding: calc($spacing-unit * 1.5);
+                width: calc($main-width - 8rem - calc($spacing-unit * 3));
+                margin: 0;
+            }
+        }
+    }
+
+}
+@media only screen and (orientation: landscape) {
+    /* turned phones calc($header_height - 8vw);*/
+#main {
+        margin-top: calc($header_height - 8vw);
+
+        section {
+
+            .intro {
+                width: auto;
+            }
+        }
+}
+
+}

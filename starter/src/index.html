@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Portfolio page for Luis Carlos Ordonez</title>
+  <link rel="stylesheet" href="../dist/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body id="body">
+  <!-- Header -->
+    <header class="header">
+      <section class="container">
+          <a class="logo" href="#">
+            <img src="img/creatiko-logo-big.png" alt="Creatiko Logo" />
+          </a>
+          <button id="hamburger-button" class="hamburger-button" aria-label="Open Navigation Menu" aria-controls="mobile-menu">
+            <!-- &#9776; -->
+            <div class="button-line"></div>
+          </button>
+      </section>
+      <section id="main-menu" class="main-menu">
+        <nav class="navigation" aria-label="desktop" role="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a class="navigation__link" href="#main">Home</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#projects">Projects</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+         <!-- desktop </nav>      -->
+      </section>
+      <section id="mobile-menu" class="mobile-menu animate-open-menu hidden">
+        <nav class="navigation" aria-label="mobile" role="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a class="navigation__link" href="#main">Home</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#projects">Projects</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- mobile </nav> -->
+      </section>
+    </header>
+  <main id="main">
+    <section id="bio" class="bio">
+      <img src="img/177-400x400.jpg" alt="Biographical Portrait of the Author">
+      <div class="intro">
+        <h1>Welcome to my page</h1>
+        <p>Hi, I’m Carlos, a Full Stack Web Developer who loves coding all kinds of projects. I am currently designing touch
+          interfaces to interact with BrightSign Digital Signage players. My key skill is turning any design you dream in
+          Figma/XD into a beautiful usable web interface. I have been a web designer / developer for 25 years. I have worked in several
+          classic web stacks and languages. I am now trying to modernize the way I program thanks to Udacity.</p>
+        <div class="buttons">
+          <button class="button button--primary">Learn More</button>
+          <button class="button button--tertiary">Contact</button>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="latest-projects">
+      <h2>Latest Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card--title">Puppy Rescue Site</h3>
+          <a class="card--link" href="javascript:void(0);">rescuepaws.com</a>
+          <img class="card--image" src="img/237-400x400.jpg" alt="Rescue Paws Project Image">
+          <p class="card--text">Rescue Paws is a 100% foster-based dog rescue center. We have been able to save
+          many puppies thanks to the financial support of our generous donors. We rescue homeless dogs from
+          high-kill shelters, socialize, care for, and provide them life-saving medical care, nurture them in our network of foster families, and finally adopt them into loving homes giving them a second chance at life.</p>
+          <button class="button button--primary card--button">Learn More</button>
+        </div>
+        <div class="card">
+          <h3 class="card--title">Fireworks Are Awesome Site</h3>
+          <a class="card--link" href="javascript:void(0);">fireworksareawesome.com</a>
+          <img class="card--image" src="img/407-400x400.jpg" alt="Fireworks Are Awesome Project Image">
+          <p class="card--text">A mass of colors flood the sky. The spectacle of fireworks can evoke feelings of wonder, 
+          excitement, and even awe Fireworks engage multiple senses, creating a powerful sensory experience. he artistry and creativity involved in fireworks displays add another layer of appreciation for their beauty and impact. This site is
+          dedicated to all things about fireworks and where you can see them in your area.</p>
+          <button class="button button--primary card--button">Learn More</button>
+        </div>
+        <div class="card">
+          <h3 class="card--title">Honey Shop Site</h3>
+          <a class="card--link" href="javascript:void(0);">honeyisyummy.com</a>
+          <img class="card--image" src="img/312-400x400.jpg" alt="Honey is Yummy Project Image">
+          <p class="card--text">Honey is naturally sweet, offering a pleasing sweetness that can enhance a wide range of 
+          foods and beverages. Honey, especially raw honey, contains antioxidants, vitamins, and minerals. It's also known for its 
+          potential to soothe coughs and support gut health. In our shop you will be able to find a wide range of honey flavors, from honey mustard to our special jalapeño honey. So delicious!</p>
+          <button class="button button--primary card--button">Learn More</button>
+        </div>
+      </div>
+      <button class="button button--primary">See all projects</button>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form method="POST" id="contact-form" class="form">
+              <label for="name" class="form--label">Your Name:</label>
+              <input type="text" id="name" name="name" minlength="3" required="" maxlength="60" placeholder="Your Name" class="form--input">
+              <label for="telephone" class="form--label">Call back telephone:</label>
+              <input type="tel" id="telephone" name="telephone" required="" minlength="3" maxlength="60"
+                placeholder="Call Back Telephone" class="form--input">
+              <label for="message" class="form--label">Message:</label>
+              <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required=""
+                class="form--textarea"></textarea>
+                <button value="submit" class="button button--primary" data-callback="onSubmit" data-action="submit" disabled>Submit</button>
+      </form>   
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Luis Carlos Ordonez. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

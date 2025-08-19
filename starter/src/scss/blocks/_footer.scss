@@ -1,0 +1,11 @@
+//_footer.scss
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.footer {
+  background-color: $dark-gray;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: $text-color-light;
+}

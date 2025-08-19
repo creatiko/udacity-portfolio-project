@@ -1,0 +1,45 @@
+// _forms.scss
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.form {
+    @include flex-center;
+    flex-direction: column;
+    padding: 0 calc($spacing-unit * 1.5);
+    width: calc($main-width - calc($spacing-unit * 3));
+    border: none;
+    font-family: $font-family;
+    @include responsive-font($base-font-size, 24px);
+    &--input{
+        width: calc(100% - calc($spacing-unit - 0.25rem));
+        padding: calc($spacing-unit - 0.25rem);
+    }
+    &--textarea{
+        width: calc(100% - calc($spacing-unit - 0.25rem));
+        padding: calc($spacing-unit - 0.25rem);
+        margin-bottom: calc($spacing-unit - 0.25rem);
+    }
+    &--label{
+        align-self: flex-start;
+        padding: calc($spacing-unit - 0.25rem) 0 calc($spacing-unit - 0.45rem) 0;
+    }
+}
+
+@media only screen and (min-width: 968px) {
+    .form {
+        width: calc($main-width - 8rem - calc($spacing-unit * 3));
+        &--input{
+            width: calc(100% - calc($spacing-unit - 0.25rem));
+            padding: calc($spacing-unit - 0.25rem);
+        }
+        &--textarea{
+            width: calc(100% - calc($spacing-unit - 0.25rem));
+            padding: calc($spacing-unit - 0.25rem);
+            margin-bottom: calc($spacing-unit - 0.25rem);
+        }
+        &--label{
+            align-self: flex-start;
+            padding: calc($spacing-unit - 0.25rem) 0 calc($spacing-unit - 0.45rem) 0;
+        }
+    }
+}

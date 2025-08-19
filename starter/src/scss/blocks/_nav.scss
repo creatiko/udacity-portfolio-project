@@ -1,0 +1,67 @@
+//nav.scss
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+#mobile-menu{
+    .navigation {
+        //max-width: 48rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        
+        .navigation__list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .navigation__link {
+            text-decoration: none;
+            text-align: center;
+            width: 100%;
+            color: #333;
+            font-weight: 500;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .navigation__link:hover{
+            opacity: 0.9;
+        }
+    }
+}
+
+#main-menu {
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        min-height: 0;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .navigation__list {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            list-style: none;
+        }
+        .navigation__link {
+            text-decoration: none;
+            text-align: center;
+            width: 100%;
+            color: #333;
+            font-weight: 500;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            @include responsive-font(calc($base-font-size * 1.5), 35px);
+        }
+        .navigation__link:hover{
+            opacity: 0.9;
+            color: $primary-color;
+        }
+    }
+
+}

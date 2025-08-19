@@ -1,0 +1,15 @@
+// src/scss/main.scss
+
+@use "utils/variables";
+@use "utils/mixins";
+@use "utils/buttons";
+@use "utils/cards";
+@use "utils/forms";
+
+@use "base/resets";
+@use "base/base";
+
+@use "blocks/header";
+@use "blocks/nav";
+@use "blocks/main";
+@use "blocks/footer";
