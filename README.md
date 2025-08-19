@@ -7,7 +7,7 @@ The site is fully responsive across devices and meet **A and AA accessibility st
 
 This project demonstrates my proficiency with CSS methodologies, preprocessors, accessibility practices, and advanced CSS techniques.
 
-The project can be seen in [GitHub Pages](https://creatiko.github.io/udacity-portfolio-project/).
+The project can be seen in [GitHub Pages](https://creatiko.github.io/udacity-portfolio-project/){:target="\_blank"} .
 
 ## Project Breakdown
 
